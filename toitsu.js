@@ -1,0 +1,4 @@
+function loads(){
+    loadMap();
+    PageLoad();
+}
