@@ -23,6 +23,7 @@ var tiriLayer=new ol.layer.Tile({
     })
   });
 
+  /*
 var coordinates = [
     [139.75655240134424, 35.6553463380788],
     [139.75648388462506, 35.65504941783402],
@@ -68,6 +69,7 @@ var coordinatesg=[
     [ 139.71241138776693 , 35.68137827608278 ] ,
     [ 139.71005104383386 , 35.68179658276378 ]]
 ]
+*/
 
 function loadMap(){
     try{
@@ -108,19 +110,20 @@ function loadMap(){
             map.setLayerGroup(new ol.layer.Group ());
             map.addLayer(tiriLayer);
         }
-
+        /*
         document.getElementById('poly').onclick=function(){
             drawMarker("TokyoTower");
             drawPolyline();
             drawPolygon();
         }
+        */
 
         //マーカーの話
         var marker0=[];
         //1個目のマーカー：吹き出しに表示するnameを追加
         marker0[0] = new ol.Feature({
         geometry: new ol.geom.Point(ol.proj.fromLonLat([139.692,35.689])),
-        name: '<a href="http://www.metro.tokyo.jp/" target="_blank">Tokyotower</a>'
+        name: '<a href="http://www.metro.tokyo.jp/" target="_blank">Tokyo</a>'
         });
 
         var style=new ol.style.Style({
