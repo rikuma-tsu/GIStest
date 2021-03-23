@@ -33,9 +33,11 @@ function handleFileSelect(evt) {
                 drawPolyline(pl_from_gpx);
             }
         }
-        if((files[i].name).match(/[.]*.jpg/)){
+        if((files[i].name).match(/[.]*.jpg/) || (files[i].name).match(/[.]*.JPG/)){
+            console.log(i);
             var gps_lon;
             var gps_lat;
+            reader.readAsDataURL(files[i]);
             EXIF.getData(files[i], function(){
                 gps_lon=EXIF.getTag(this, "GPSLongitude");
                 gps_lat=EXIF.getTag(this, "GPSLatitude");
@@ -48,7 +50,7 @@ function handleFileSelect(evt) {
                 //1個目のマーカー：吹き出しに表示するnameを追加
                 marker0 = new ol.Feature({
                 geometry: new ol.geom.Point(ol.proj.fromLonLat([g_lon,g_lat])),
-                name: '<a target="_blank"><img src="sample.jpg" width="150" height="150"></a>'
+                name: '<img src="'+reader.result+'" width="150" height="150">'
                 });
                 var style=new ol.style.Style({
                     image: new ol.style.Icon({
@@ -68,12 +70,6 @@ function handleFileSelect(evt) {
         //console.log("hoge");
         //reader.readAsText(files[i]);
     }
-}
-
-function trans(lon_lat){
-    var dobu = parseFloat(lon_lat.match(/[0-9]+/gimu));
-    var byou = parseFloar(lon_lat.match(/[0-9]+.[0-9]+/gimu))
-    return dobu[0]+dobu[1]*60+byou*3600
 }
 
 function handleDragOver(evt) {
