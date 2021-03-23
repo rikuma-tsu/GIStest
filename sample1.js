@@ -74,7 +74,7 @@ function loadMap(){
         //マップの作成
         map=new ol.Map({
             target: 'map', 
-            layers: [new ol.layer.Tile({source: new ol.source.OSM()})],
+            layers: [tiriLayer],//new ol.layer.Tile({source: new ol.source.OSM()})],
             controls: ol.control.defaults({
                 attributionOptions: {
                 collapsible: false//折り畳みを無効
