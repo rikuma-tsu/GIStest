@@ -115,6 +115,7 @@ function loadMap(){
             drawPolygon();
         }*/
 
+        /*
         //マーカーの話
         var marker0=[];
         //1個目のマーカー：吹き出しに表示するnameを追加
@@ -136,6 +137,8 @@ function loadMap(){
         features: [marker0[0]]
         })}));
         console.log("描写");
+        */
+        
         //吹き出しを表示するためのクリックイベント
         map.on('click', function(evt) {
             var feature = map.forEachFeatureAtPixel(evt.pixel,function(feature) {return feature;});
