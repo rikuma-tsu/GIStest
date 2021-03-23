@@ -25,11 +25,10 @@ function gpx_file_c(file){
 }
 
 function jpg_file_c(file){
-    console.log(i);
     var gps_lon;
     var gps_lat;
-    reader.readAsDataURL(files[i]);
-    EXIF.getData(files[i], function(){
+    reader.readAsDataURL(files);
+    EXIF.getData(file, function(){
         gps_lon=EXIF.getTag(this, "GPSLongitude");
         gps_lat=EXIF.getTag(this, "GPSLatitude");
         console.log(gps_lon+"   "+gps_lat);
