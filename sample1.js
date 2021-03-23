@@ -125,7 +125,7 @@ function loadMap(){
 
         var style=new ol.style.Style({
             image: new ol.style.Icon({
-            src : "/img/icon.png",
+            src : "img/icon.png",
             anchor : [0.5,1.0],
             scale : 0.3
             }) 
