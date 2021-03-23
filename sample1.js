@@ -71,6 +71,17 @@ var coordinatesg=[
 
 function loadMap(){
     try{
+        $.getJSON("marker.json",function(data){
+    markerdata=data;
+});
+
+$.getJSON("polyline.json",function(data){
+    polylinedata=data;
+});
+
+$.getJSON("polygon.json",function(data){
+    polygondata=data;
+});
         //マップの作成
         map=new ol.Map({
             target: 'map', 
