@@ -1,4 +1,4 @@
-function gpx_file_c(file){
+function gpx_file_c(file,reader){
     var lat=[];
     var lon=[];
     var pl_from_gpx=[];
@@ -24,7 +24,7 @@ function gpx_file_c(file){
     }
 }
 
-function jpg_file_c(file){
+function jpg_file_c(file,reader){
     var gps_lon;
     var gps_lat;
     reader.readAsDataURL(file);
