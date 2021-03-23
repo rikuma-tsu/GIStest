@@ -27,7 +27,7 @@ function gpx_file_c(file){
 function jpg_file_c(file){
     var gps_lon;
     var gps_lat;
-    reader.readAsDataURL(files);
+    reader.readAsDataURL(file);
     EXIF.getData(file, function(){
         gps_lon=EXIF.getTag(this, "GPSLongitude");
         gps_lat=EXIF.getTag(this, "GPSLatitude");
