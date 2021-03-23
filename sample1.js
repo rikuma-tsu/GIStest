@@ -108,11 +108,12 @@ function loadMap(){
             map.setLayerGroup(new ol.layer.Group ());
             map.addLayer(tiriLayer);
         }
+        /*
         document.getElementById('poly').onclick=function(){
             drawMarker("TokyoTower");
             drawPolyline();
             drawPolygon();
-        }
+        }*/
 
         //マーカーの話
         var marker0=[];
